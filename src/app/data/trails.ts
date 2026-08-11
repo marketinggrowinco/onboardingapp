@@ -2715,49 +2715,179 @@ Depois de dominar o básico do n8n:
   'Customer Success': {
     id: 'team-customer-success',
     name: 'Trilha de Customer Success',
-    description: 'Estratégias de sucesso do cliente e retenção',
+    description: 'Conceitos, fluxos, treinamentos e marcos de performance para atuação com projetos de terceirização (co-manufatura, ingredientes e embalagens)',
     items: [
       {
         id: 'cs-1',
-        title: 'Reunião com CS Lead',
-        description: 'Estratégia de Customer Success, segmentação e objetivos',
-        type: 'meeting',
-        duration: '1h',
+        title: 'CPG e Incoterms',
+        description: 'O que é Consumer Packaged Goods (CPG) e os principais Incoterms usados em projetos',
+        type: 'reading',
+        duration: '30 min',
+        content: `Antes de atuar em projetos reais, é essencial dominar os conceitos e siglas usados no dia a dia com clientes e fornecedores (solvers). Use este item como material de consulta.
+
+## O que é Consumer Packaged Goods (CPG)
+
+CPG (Consumer Packaged Goods), ou "bens de consumo embalados", são produtos de giro rápido, consumidos e repostos com frequência pelo consumidor final — alimentos, bebidas, produtos de cuidados pessoais, higiene e limpeza. É a indústria em que a maior parte dos nossos clientes e solvers atua, e o pano de fundo de praticamente todos os projetos que gerenciamos.
+
+## Incoterms
+
+Incoterms (International Commercial Terms) são termos padronizados publicados pela Câmara de Comércio Internacional (ICC) que definem, em uma transação de compra e venda, quem é responsável pelo transporte, seguro, custos e transferência de risco entre vendedor e comprador. Eles são fundamentais para entender condições de entrega em projetos de co-manufatura, ingredientes e embalagens.
+
+- **EXW (Ex Works)** — Qualquer modal. Vendedor disponibiliza a mercadoria em sua própria fábrica/depósito; comprador assume todo transporte, custos e riscos a partir daí. Ex: fábrica em Suzano (SP) entrega o lote na própria doca; o cliente contrata o transportador.
+- **FCA (Free Carrier)** — Qualquer modal. Vendedor entrega a mercadoria desembaraçada para exportação ao transportador indicado pelo comprador, no local combinado. Ex: fabricante entrega paletes ao transportador contratado pelo cliente no porto de Santos.
+- **CPT (Carriage Paid To)** — Qualquer modal. Vendedor paga o frete até o destino combinado, mas o risco passa ao comprador na entrega ao primeiro transportador. Ex: vendedor paga o frete rodoviário até o CD do cliente em Curitiba; risco passa antes disso.
+- **CIP (Carriage and Insurance Paid To)** — Qualquer modal. Como o CPT, mas o vendedor também contrata seguro de cobertura ampla até o destino. Ex: exportação de ingredientes para a Argentina, com seguro contratado pelo vendedor.
+- **DAP (Delivered at Place)** — Qualquer modal. Vendedor entrega a mercadoria pronta para descarga no destino combinado; comprador cuida da importação/desembaraço. Ex: entrega de embalagens no CD do cliente, pronto para descarregar.
+- **DPU (Delivered at Place Unloaded)** — Qualquer modal. Como o DAP, mas o vendedor também é responsável por descarregar a mercadoria no destino. Ex: entrega de matéria-prima já descarregada no armazém do fabricante contratado.
+- **DDP (Delivered Duty Paid)** — Qualquer modal. Vendedor assume todos os custos e riscos, incluindo impostos de importação, até a entrega final. Ex: fornecedor internacional entrega o produto acabado com impostos já pagos na porta do cliente.
+- **FAS (Free Alongside Ship)** — Marítimo/fluvial. Vendedor entrega a mercadoria ao lado do navio no porto de embarque; comprador assume dali em diante. Ex: matéria-prima posicionada no cais do porto de Paranaguá para embarque.
+- **FOB (Free on Board)** — Marítimo/fluvial. Vendedor entrega a bordo do navio; risco passa ao comprador quando a mercadoria é embarcada. Ex: exportação de commodities alimentícias via porto de Santos.
+- **CFR (Cost and Freight)** — Marítimo/fluvial. Vendedor paga o frete até o porto de destino, mas o risco passa ao comprador no embarque. Ex: ingredientes importados da Ásia, frete pago pelo vendedor até o porto de destino.
+- **CIF (Cost, Insurance and Freight)** — Marítimo/fluvial. Como o CFR, mas o vendedor também contrata o seguro até o porto de destino. Ex: importação de embalagens especiais, com seguro incluso até o porto brasileiro.`,
       },
       {
         id: 'cs-2',
-        title: 'Vídeo: Jornada do Cliente',
-        description: 'Onboarding, adoção, expansão e renovação',
-        type: 'video',
-        duration: '30 min',
+        title: 'Modelos de Fabricação e Siglas do Dia a Dia',
+        description: 'Tolling, turnkey, NDA, RFI/RFP/RFQ e outros termos usados com clientes e fornecedores',
+        type: 'reading',
+        duration: '25 min',
+        content: `- **Tolling** — Modelo em que o cliente fornece os insumos (matéria-prima e, às vezes, a fórmula) e contrata o fabricante apenas para processar/transformar o produto, pagando uma taxa de processamento ("toll fee"). A propriedade dos insumos permanece com o cliente durante todo o processo.
+- **Turnkey** — Modelo "chave na mão": o fabricante fornece tudo — insumos, formulação, embalagem e produção completa — e entrega o produto acabado pronto para o cliente comprar.
+- **NDA (Non-Disclosure Agreement)** — Acordo de confidencialidade assinado entre cliente e solver antes de compartilhar informações sensíveis do projeto, como fórmulas, especificações técnicas e volumes. É pré-requisito para avançar para a reunião de conexão em projetos de co-manufatura.
+- **RFI (Request for Information)** — Solicitação de informação: fase exploratória em que buscamos entender as capacidades, certificações e capacidade produtiva de um fornecedor, antes de pedir uma proposta ou cotação formal.
+- **RFP (Request for Proposal)** — Solicitação de proposta: o fornecedor apresenta uma solução/abordagem para atender à necessidade do cliente, geralmente incluindo escopo técnico, prazos e condições gerais.
+- **RFQ (Request for Quotation)** — Solicitação de cotação: usada quando a especificação do produto já está definida e o foco é obter preço e condições comerciais junto aos fornecedores.
+- **Co-manufatura** — Modelo de terceirização em que um fabricante produz, por contrato, produtos em nome de outra marca (o cliente). Engloba tanto tolling quanto turnkey.
+- **Fazones (fasones)** — Termo comum na América Latina para se referir a fabricantes contratados (co-packers), muito usado no setor têxtil e também no alimentício em países de língua espanhola.
+- **Maquila** — Termo usado principalmente no México e na América Central para fábricas que processam ou montam produtos sob regime de contrato, em geral voltadas à exportação.
+- **Third Party Manufacturer (TPM)** — Termo genérico em inglês para "fabricante terceirizado" — empresa contratada para fabricar produtos em nome de outra marca. Sinônimo amplo de co-manufaturador.
+- **NPD (New Product Development)** — Processo de desenvolvimento de novo produto, do conceito ao lançamento. É uma das principais motivações para a abertura de projetos de co-manufatura, ingredientes ou embalagens.`,
       },
       {
         id: 'cs-3',
-        title: 'Tutorial: Plataforma de CS - Gainsight/Totango',
-        description: 'Health score, playbooks e gestão de contas',
-        type: 'tutorial',
-        duration: '1h30',
+        title: 'Motivações para Abertura de um Projeto',
+        description: 'Entenda por que os clientes abrem projetos para orientar melhor e priorizar solvers',
+        type: 'reading',
+        duration: '10 min',
+        content: `Entender a motivação por trás de um projeto ajuda a orientar melhor o cliente e a priorizar solvers. As motivações mais comuns são:
+
+- **Business Contingency Plan (plano de contingência de negócio)** — o cliente busca um fornecedor backup para garantir continuidade de fornecimento em caso de falha do fornecedor atual.
+- **Desafio de fornecedor atual** — insatisfação com preço, qualidade, capacidade ou prazo do fornecedor vigente leva à busca por alternativas no mercado.
+- **Desenvolvimento de novo produto (NPD)** — lançamento de um produto novo, exigindo a identificação de um fabricante ou fornecedor capaz de viabilizá-lo.`,
       },
       {
         id: 'cs-4',
-        title: 'Tutorial: Métricas de CS',
-        description: 'NPS, CSAT, churn, expansion e outras métricas essenciais',
-        type: 'tutorial',
-        duration: '1h',
+        title: 'Como Funciona a Postagem de um Projeto',
+        description: 'Passo a passo de como um projeto é postado na plataforma, e os três tipos de projeto',
+        type: 'video',
+        duration: '20 min',
+        link: 'https://app.salesbud.com.br/s/123f6f272f300ec59a9055e9111d99f91bba96df6b30def51ae6fc244c1445e9',
+        content: `Projetos são a nossa principal entrega de valor. É por meio deles que conectamos a necessidade do cliente à capacidade dos solvers — dominar esse fluxo é a base do trabalho.
+
+Assista ao treinamento: [Como funciona a postagem de um projeto](https://app.salesbud.com.br/s/123f6f272f300ec59a9055e9111d99f91bba96df6b30def51ae6fc244c1445e9)
+
+## Tipos de projeto
+
+- **Co-fabricação (Co-manufatura)** — use este fluxo para solicitar produção por tolling ou turnkey para produtos alimentícios, bebidas ou cuidados pessoais, especificando certificações necessárias, formatos e condições de entrega.
+- **Ingredientes** — ideal para cotação de ingredientes específicos, encontrar fornecedores alternativos ou mapear capacidades por tecnologia ou certificação.
+- **Embalagens** — de embalagens primárias a secundárias, este tipo de projeto permite solicitar cotações, explorar novas tecnologias ou comparar opções de embalagem.`,
       },
       {
         id: 'cs-5',
-        title: 'Leitura: Playbook de Success',
-        description: 'QBRs, check-ins, renewals e melhores práticas',
-        type: 'reading',
-        duration: '40 min',
+        title: 'Treinamentos Complementares: Mintel e Direct Materials',
+        description: 'Ferramentas para ampliar o repertório de categorias de produto e pesquisa de mercado',
+        type: 'tutorial',
+        duration: '45 min',
+        content: `Além do fluxo de postagem, complete os treinamentos abaixo para ampliar seu repertório de ferramentas e categorias de produto:
+
+- [Treinamento — Mintel](https://app.salesbud.com.br/s/255963b0ce65490c7284fbe46d19cec745d1bdc2680d68723dbdead175f67679)
+- [Treinamento — Direct Materials](https://app.salesbud.com.br/s/1a1a908dcc9702e67498cb24d15f1f714b16926181ff64f4c61055442f8d0cd6)`,
       },
       {
         id: 'cs-6',
-        title: 'Tutorial: Ferramentas de Suporte',
-        description: 'Zendesk, Intercom e gestão de tickets',
-        type: 'tutorial',
+        title: 'Reuniões do Projeto: Conexão e Atualização',
+        description: 'Quando e como acontecem as reuniões de conexão e de atualização com o cliente',
+        type: 'reading',
+        duration: '15 min',
+        content: `## Reunião de conexão
+
+Reuniões de conexão ocorrem principalmente em projetos de co-manufatura, após a assinatura do NDA. É o momento em que cliente e solver se conhecem diretamente para aprofundar o alinhamento técnico e comercial.
+
+[O que é uma reunião de conexão?](https://app.salesbud.com.br/s/0c2efc478a127140e8abed3c542624dad58455f0c67ee556ec697a3741caf72e)
+
+## Reuniões de atualização
+
+Reuniões de atualização ocorrem de forma semanal ou quinzenal entre o time e o cliente, para compartilhar updates do projeto e um overview do que foi encontrado até o momento.
+
+[Como funcionam as reuniões de atualização de um projeto?](https://app.salesbud.com.br/s/363cbc75436defa6a026d2639b985a480bfe2e4fb81b934628c2b44c5df6534a)`,
+      },
+      {
+        id: 'cs-7',
+        title: 'Onboarding: HubSpot',
+        description: 'Sessão com Leo ou Enzo sobre o uso do HubSpot',
+        type: 'meeting',
         duration: '45 min',
+        content: `Agende esta sessão com **Leo** ou **Enzo** durante as primeiras semanas de onboarding para aprender a usar o HubSpot no dia a dia.`,
+      },
+      {
+        id: 'cs-8',
+        title: 'Onboarding: Apollo e LinkedIn Sales Navigator',
+        description: 'Sessão com Amanda sobre prospecção e mapeamento de solvers',
+        type: 'meeting',
+        duration: '45 min',
+        content: `Agende esta sessão com **Amanda** durante as primeiras semanas de onboarding para aprender a usar o Apollo e o LinkedIn Sales Navigator.`,
+      },
+      {
+        id: 'cs-9',
+        title: 'Onboarding: Mintel e Latam Food Explorer',
+        description: 'Sessão com Karol sobre ferramentas de pesquisa de mercado',
+        type: 'meeting',
+        duration: '45 min',
+        content: `Agende esta sessão com **Karol** durante as primeiras semanas de onboarding para aprender a usar o Mintel e o Latam Food Explorer.`,
+      },
+      {
+        id: 'cs-10',
+        title: 'Onboarding: Go-To-Market (GTM)',
+        description: 'Sessão com Pedro sobre o processo de Go-To-Market',
+        type: 'meeting',
+        duration: '45 min',
+        content: `Agende esta sessão com **Pedro** durante as primeiras semanas de onboarding para entender o processo de Go-To-Market (GTM).`,
+      },
+      {
+        id: 'cs-11',
+        title: 'Onboarding: Salesforce (SF)',
+        description: 'Sessão com Enzo sobre o uso do Salesforce',
+        type: 'meeting',
+        duration: '45 min',
+        content: `Agende esta sessão com **Enzo** durante as primeiras semanas de onboarding para aprender a usar o Salesforce (SF).`,
+      },
+      {
+        id: 'cs-12',
+        title: 'Expectativas de Performance (30/60/90 dias)',
+        description: 'Marcos de performance esperados nos primeiros 30, 60 e 90 dias',
+        type: 'reading',
+        duration: '15 min',
+        content: `## 30 dias
+
+- Gerenciar um projeto do início até a postagem de cotação/reunião de conexão.
+- Ser capaz de orientar o cliente para a postagem de projetos.
+- Ampliar o conhecimento sobre categorias de produtos, armazenamento, embalagem e ingredientes.
+- Fechar sua primeira SF.
+
+## 60 dias
+
+- Gerenciar um projeto com ownership total.
+- Ser capaz de revisar, aprovar ou pontuar dúvidas e mudanças de forma consultiva nos projetos.
+- Ser capaz de qualificar solvers para o Go-To-Market e indicá-los para o processo de vendas.
+- Fechar duas SFs.
+
+## 90 dias
+
+- Gerenciar seus projetos da postagem, revisão, até o critério de sucesso.
+- Ter ownership total da conta designada.
+- Apoiar proativamente no fechamento de Go-To-Market, qualificando e apresentando o pipeline.
+- Fechar contratos de SF com parceiros estratégicos.
+- Ser capaz de priorizar parceiros e projetos de acordo com os interesses das suas contas.`,
       },
     ],
   },
