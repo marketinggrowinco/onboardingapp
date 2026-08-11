@@ -2712,9 +2712,9 @@ Depois de dominar o básico do n8n:
       },
     ],
   },
-  'Customer Success': {
+  'Customer Success/Project Management': {
     id: 'team-customer-success',
-    name: 'Trilha de Customer Success',
+    name: 'Trilha de Customer Success/Project Management',
     description: 'Conceitos, fluxos, treinamentos e marcos de performance para atuação com projetos de terceirização (co-manufatura, ingredientes e embalagens)',
     items: [
       {
