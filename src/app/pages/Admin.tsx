@@ -2,11 +2,10 @@ import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router';
 import { BarChart, Bar, PieChart, Pie, Cell, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 import { Users, TrendingUp, CheckCircle, Clock, ArrowLeft, RefreshCw, ShieldAlert } from 'lucide-react';
-import { projectId, publicAnonKey } from '/utils/supabase/info';
 import { teamTrails, companyTrail } from '../data/trails';
 import { isUserAdmin } from '../utils/storage';
 
-const API_URL = `https://${projectId}.supabase.co/functions/v1/make-server-6924fec6`;
+const API_URL = '/api';
 
 interface UserData {
   userId: string;
@@ -38,11 +37,7 @@ export function Admin() {
   const fetchUsers = async () => {
     try {
       setRefreshing(true);
-      const response = await fetch(`${API_URL}/admin/users`, {
-        headers: {
-          'Authorization': `Bearer ${publicAnonKey}`,
-        },
-      });
+      const response = await fetch(`${API_URL}/admin/users`);
 
       if (!response.ok) {
         const errorData = await response.json().catch(() => ({}));
