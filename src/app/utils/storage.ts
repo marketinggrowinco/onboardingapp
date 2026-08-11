@@ -1,3 +1,5 @@
+import { projectId, publicAnonKey } from '/utils/supabase/info';
+
 export interface UserProgress {
   email: string; // Primary identifier - now required
   displayName: string; // How the user wants to be called
@@ -8,7 +10,7 @@ export interface UserProgress {
 }
 
 const STORAGE_KEY = 'onboarding_progress';
-const API_URL = '/api';
+const API_URL = `https://${projectId}.supabase.co/functions/v1/make-server-6924fec6`;
 
 // Lista de emails com acesso administrativo
 const ADMIN_EMAILS = [
@@ -42,6 +44,7 @@ async function syncToBackend(progress: UserProgress): Promise<void> {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
+        'Authorization': `Bearer ${publicAnonKey}`,
       },
       body: JSON.stringify({
         userName: progress.displayName,
