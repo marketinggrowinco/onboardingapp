@@ -12,6 +12,11 @@ export interface UserProgress {
 const STORAGE_KEY = 'onboarding_progress';
 const API_URL = `https://${projectId}.supabase.co/functions/v1/make-server-6924fec6`;
 
+// Nomes de time antigos -> nome atual (evita quebrar progresso já salvo após renomear um time)
+const TEAM_NAME_MIGRATIONS: Record<string, string> = {
+  'Customer Success': 'Customer Success/Project Management',
+};
+
 // Lista de emails com acesso administrativo
 const ADMIN_EMAILS = [
   'mariane.monteiro@growinco.com',
@@ -77,7 +82,14 @@ export function getUserProgress(): UserProgress | null {
   try {
     const data = localStorage.getItem(STORAGE_KEY);
     if (data) {
-      return JSON.parse(data);
+      const progress: UserProgress = JSON.parse(data);
+      const migratedTeam = TEAM_NAME_MIGRATIONS[progress.team];
+      if (migratedTeam) {
+        const migratedProgress = { ...progress, team: migratedTeam };
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(migratedProgress));
+        return migratedProgress;
+      }
+      return progress;
     }
   } catch (error) {
     console.error('Error loading progress:', error);

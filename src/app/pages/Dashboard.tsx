@@ -20,17 +20,18 @@ export function Dashboard() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [showAdmin, setShowAdmin] = useState(isUserAdmin());
 
+  const teamTrail = userProgress ? teamTrails[userProgress.team] : undefined;
+
   useEffect(() => {
-    if (!userProgress) {
+    if (!userProgress || !teamTrail) {
       navigate('/');
     }
-  }, [userProgress, navigate]);
+  }, [userProgress, teamTrail, navigate]);
 
-  if (!userProgress) {
+  if (!userProgress || !teamTrail) {
     return null;
   }
 
-  const teamTrail = teamTrails[userProgress.team];
   const allItems = [...companyTrail.items, ...teamTrail.items];
   const completedCount = completedItems.length;
   const totalProgress = calculateProgress(allItems.length, completedCount);
