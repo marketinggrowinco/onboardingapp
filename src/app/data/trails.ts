@@ -2855,11 +2855,11 @@ Reuniões de atualização ocorrem de forma semanal ou quinzenal entre o time e 
       },
       {
         id: 'cs-11',
-        title: 'Onboarding: Salesforce (SF)',
-        description: 'Sessão com Enzo sobre o uso do Salesforce',
+        title: 'Onboarding: Success Fee (SF)',
+        description: 'Sessão com Karol sobre Success Fee',
         type: 'meeting',
         duration: '45 min',
-        content: `Agende esta sessão com **Enzo** durante as primeiras semanas de onboarding para aprender a usar o Salesforce (SF).`,
+        content: `Agende esta sessão com **Karol** durante as primeiras semanas de onboarding para entender o Success Fee (SF).`,
       },
       {
         id: 'cs-12',
